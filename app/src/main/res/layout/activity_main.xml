@@ -1,18 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/bckgr"
+
+    >
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/logo"
+
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Wpisz swoją wage"
+        android:text="Podaj swoj wzrost (cm)"
         android:textSize="30dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="6"
+        android:inputType="number"
+        android:textAlignment="center"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Wpisz swoją wage (kg)"
+        android:textSize="30dp"
+        android:textColor="#FFFFFF"
         android:layout_marginTop="80dp"
         />
 
@@ -22,26 +63,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:ems="6"
+        android:inputType="numberDecimal"
         android:textAlignment="center"
         />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Podaj swoj wzrost"
-        android:textSize="30dp"
-        android:layout_marginTop="80dp"
-        />
 
-    <EditText
-        android:id="@+id/height"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:ems="6"
-        android:textAlignment="center"
-        />
+
 
     <Button
         android:id="@+id/calculate_button"
@@ -49,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="Oblicz BMI"
-
+        android:layout_marginTop="15dp"
         android:onClick="calculateBMI"
         />
 
@@ -57,9 +84,11 @@
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Wynik"
-        android:layout_marginTop="20dp"
+        android:text="Twoj wynik"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="30dp"
         android:layout_gravity="center"
         android:textSize="30dp"
         />
 </LinearLayout>
+</ScrollView>
